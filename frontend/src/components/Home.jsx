@@ -5,6 +5,7 @@ import CategoryCarousel from './CategoryCarousel'
 import LatestJobs from './LatestJobs'
 import Footer from './Footer'
 import Advertisement from './shared/Advertisement'
+import Signup from '.././components/auth/Signup'
 
 
 const Home = () => {
@@ -12,9 +13,10 @@ const Home = () => {
     <div >
       <Advertisement/>
       <div>
-         <Navbar/>
+         {/* <Navbar/>
         <HeroSection/>
-        <CategoryCarousel/>
+        <CategoryCarousel/> */}
+        <Signup/>
         <LatestJobs/>
         <Footer/>
        
