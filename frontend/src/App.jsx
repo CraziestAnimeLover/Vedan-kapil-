@@ -9,6 +9,10 @@ import Browse from './components/Browse'
 import Profile from './components/Profile'
 import Companies from './components/admin/Companies'
 import JobDescription from './components/JobDescription'
+import ServicePage from './components/Pages/ServicePage'
+import NewsFeed from './components/Pages/NewsFeed'
+import StudentForm from './components/auth/StudentForm'
+
 
 
 
@@ -21,6 +25,15 @@ const approuter = createBrowserRouter([
   },
   { path: '/register', 
     element: <Signup/>
+   },
+   { path: '/service', 
+    element: <ServicePage/>
+   },
+   { path: '/service/student', 
+    element: <StudentForm/>
+   },
+   { path: '/newsfeed', 
+    element: <NewsFeed/>
    },
    { path: '/jobs', 
     element: <Jobs/>

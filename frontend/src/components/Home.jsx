@@ -11,7 +11,7 @@ import Signup from '.././components/auth/Signup'
 const Home = () => {
   return (
     <div >
-      <Advertisement/>
+      {/* <Advertisement/> */}
       <div>
          {/* <Navbar/>
         <HeroSection/>
