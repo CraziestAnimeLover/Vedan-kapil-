@@ -26,7 +26,7 @@ app.use(express.urlencoded({ extended:true}));
 app.use(cookieParser());
 
 const corsOptions = {
-    origin: 'https://kapil-kappa.vercel.app/', // replace with your frontend url
+    origin: 'https://kapil-kappa.vercel.app', // replace with your frontend url
     credentials: true,
 }
 app.use(cors(corsOptions))
