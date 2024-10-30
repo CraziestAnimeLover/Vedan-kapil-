@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Linkedin } from 'lucide-react'; // Assuming you are using lucide-react for icons
+import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react'; // Assuming you are using lucide-react for icons
 
 const Footer = () => {
   return (
@@ -27,6 +27,9 @@ const Footer = () => {
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#c03131] transition-colors">
                 <Linkedin className="w-6 h-6" />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#c03131] transition-colors">
+                <Instagram className="w-6 h-6" />
               </a>
             </div>
 

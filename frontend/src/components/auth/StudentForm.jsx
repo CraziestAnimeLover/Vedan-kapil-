@@ -9,11 +9,13 @@ const ResumeInput = () => {
     name: '',
     email: '',
     phone: '',
+    address: '',
     linkedIn: '',
     portfolio: '',
     skills: '',
     experience: '',
     education: '',
+    certificate:";"
   });
 
   const changeEventHandler = (e) => {
@@ -31,9 +33,11 @@ const ResumeInput = () => {
       phone: input.phone,
       linkedIn: input.linkedIn,
       portfolio: input.portfolio,
+      address: input.address,
       skills: input.skills.split(',').map(skill => skill.trim()), // Convert skills to an array
       experience: input.experience.split(',').map(exp => exp.trim()), // Convert experience to an array
       education: input.education.split(',').map(edu => edu.trim()), // Convert education to an array
+      certificate: input.certificate.split(',').map(edu => edu.trim()), // Convert education to an array
     }));
 
     // Reset the form after submission
@@ -46,6 +50,8 @@ const ResumeInput = () => {
       skills: '',
       experience: '',
       education: '',
+      certificate:"",
+      address:"",
     });
   };
 
@@ -82,25 +88,27 @@ const ResumeInput = () => {
       {/* Display Submitted Data Section */}
       <div className='md:w-1/2 bg-gray-50 p-6 rounded-lg shadow-md mt-4 md:mt-0'>
         <h2 className='font-bold text-4xl mb-4 text-gray-800'>{input.name}</h2>
-        <div className='space-y-2 grid-cols-2'>
-            <div className=' flex flex-col  md:flex-row max-w-2xl space-x-60'>
-            <div  >
-            <p><strong>Portfolio:</strong> <a href={input.portfolio} target="_blank" rel="noopener noreferrer" className='text-blue-600'>{input.portfolio}</a></p>
-            <p><strong>LinkedIn:</strong> <a href={input.linkedIn} target="_blank" rel="noopener noreferrer" className='text-blue-600'>{input.linkedIn}</a></p>
+        <div className='space-y-2 grid-cols-2 '>
+            <div className=' flex flex-col  md:flex-row max-w-2xl justify-between '>
+            <div className='' >
+            <p className='flex'><strong>Portfolio:</strong> <a href={input.portfolio} target="_blank" rel="noopener noreferrer" className='text-blue-600'>{input.portfolio}</a></p>
+            <p className='flex '><strong>LinkedIn:</strong> <a href={input.linkedIn} target="_blank" rel="noopener noreferrer" className='text-blue-600'>{input.linkedIn}</a></p>
             </div>
-            <div className='px-16'>
+            <div className='px-16  '>
             <p className='flex'><strong>Email:</strong> {input.email}</p>
             <p className='flex'><strong>Phone:</strong> {input.phone}</p>
+            <p className='flex'><strong>Address:</strong> {input.address}</p>
             </div>
             </div>
             <hr></hr>
             <p className='py-6'><strong>Skills:</strong> {input.skills.split(',').map(skill => skill.trim()).join(', ')}</p>
           <p><strong>Experience:</strong> {input.experience.split(',').map(exp => exp.trim()).join(', ')}</p>
           <p><strong>Education:</strong> {input.education.split(',').map(edu => edu.trim()).join(', ')}</p>
+          <p><strong>Certificate:</strong> {input.education.split(',').map(edu => edu.trim()).join(', ')}</p>
         </div>
-        <button type='submit' className='w-full mt-60 bg-blue-600 text-white font-bold py-2 rounded-lg hover:bg-blue-700 transition duration-200'>
+        {/* <button type='submit' className='w-full mt-60 bg-blue-600 text-white font-bold py-2 rounded-lg hover:bg-blue-700 transition duration-200'>
           Download
-        </button>
+        </button> */}
       </div>
     </div>
  

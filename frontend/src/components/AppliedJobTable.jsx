@@ -21,21 +21,16 @@ const AppliedJobTable = () => {
                     {
                         // allAppliedJobs.length <= 0 ? <span>You haven't applied any job yet.</span> : allAppliedJobs
                         [1,2,3,4].map((appliedJob) => (
-                            <TableRow key={appliedJob._id}>
-                                <TableCell>
-                                    {/* {appliedJob?.createdAt?.split("T")[0]} */}
-                                    17-0.4-2024
-                                    </TableCell>
-                                <TableCell>
-                                    {/* {appliedJob.job?.title} */}
-                                    Frontend 
-                                    {/* <Developer></Developer> */}
-                                    </TableCell>
-                                <TableCell>
-                                    {/* {appliedJob.job?.company?.name} */}
-                                    Google
-                                    </TableCell>
-                                {/* <TableCell className="text-right"><Badge className={`${appliedJob?.status === "rejected" ? 'bg-red-400' : appliedJob.status === 'pending' ? 'bg-gray-400' : 'bg-green-400'}`}>{appliedJob.status.toUpperCase()}</Badge></TableCell> */}
+                            <TableRow key={appliedJob}>
+                                <TableCell>17-04-2024</TableCell>
+                                <TableCell>Frontend</TableCell>
+                                <TableCell>Google</TableCell>
+                                {/* Uncomment and update Badge component with actual status */}
+                                {/* <TableCell className="text-right">
+                                    <Badge className={`${appliedJob.status === "rejected" ? 'bg-red-400' : appliedJob.status === 'pending' ? 'bg-gray-400' : 'bg-green-400'}`}>
+                                        {appliedJob.status.toUpperCase()}
+                                    </Badge>
+                                </TableCell> */}
                             </TableRow>
                         ))
                     }
