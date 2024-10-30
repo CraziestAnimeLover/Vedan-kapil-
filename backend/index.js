@@ -26,12 +26,12 @@ app.use(express.urlencoded({ extended:true}));
 app.use(cookieParser());
 
 const corsOptions = {
-    origin: 'https://kapil-kappa.vercel.app', // replace with your frontend url
+    origin: 'http://localhost:5173', // replace with your frontend url
     credentials: true,
 }
 app.use(cors(corsOptions))
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8000;
 
 // api
 app.get("/home",(req,res)=>{
